@@ -85,6 +85,7 @@ document.addEventListener('DOMContentLoaded', () => {
         resultDisplay.textContent = cardsWon.length
       if (cardsWon.length === secondCard.length / 2) {
           let text = document.querySelector('h3')
+          text.classList='winnerMessage'
           text.innerHTML = 'Congratulation! You found them All!'
           let parentBtn = document.querySelector('.btn')
           let restartBtn = document.createElement('button')
@@ -98,7 +99,6 @@ document.addEventListener('DOMContentLoaded', () => {
       showAlert('Sorry, try again', 'no-match')
       
       setTimeout(function () {
-        
         cards[optionOneId].setAttribute('src', 'images/camomile.png')
         cards[optionOneId].classList.remove('clicked')
         cards[optionTwoId].setAttribute('src', 'images/camomile.png')
